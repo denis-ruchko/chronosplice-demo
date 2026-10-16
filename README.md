@@ -5,13 +5,13 @@ an elastic net on gene expression (log-CPM), and the same model with LeafCutter 
 
 ## Data
 
-| study | recount3 project | samples | ages |
-|---|---|---|---|
-| GSE94438 | SRP098758 | 327 listed | 8-60 |
-| GSE79362 | SRP071965 | 245 | 13-18 |
-| GSE134080 | SRP214077 | 100 | 18-73 |
-| GSE122485 | SRP168555 | 3 | 25-35 |
-| GTEx v8 whole blood | GTEx `BLOOD` | 755 subjects | 20-79 |
+| study | recount3 project | samples | ages | notes |
+|---|---|---|---|---|
+| GSE94438 | SRP098758 | 327 listed | 8-60 | |
+| GSE79362 | SRP071965 | 245 | 13-18 | |
+| GSE134080 | SRP214077 | 100 | 18-73 | |
+| GSE122485 | SRP168555 | 3 | 25-35 | always in training (too small to hold out) |
+| GTEx v8 whole blood | GTEx `BLOOD` | 755 subjects | 20-79 | ages are public 10-year bins only |
 
 Ages and sex for the GEO samples come from Li et al. 2025, Table S1 (`metadata/geo_samples_li2025.csv`).
 GTEx ages are the bin midpoints (25, 35, ... 75); exact GTEx ages are access-controlled.
