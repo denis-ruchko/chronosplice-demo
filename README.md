@@ -1,6 +1,6 @@
 # ChronoSplice demo
 
-Blood transcriptomic age clocks built from public RNA-seq in [recount3](https://rna.recount.bio/):
+Blood transcriptomic age clocks built from RNA-seq in [recount3](https://rna.recount.bio/):
 an elastic net on gene expression (log-CPM), and the same model with LeafCutter splicing (PSI) added.
 Everything runs on a CPU with numpy, pandas, scipy, scikit-learn and requests.
 
