@@ -2,7 +2,6 @@
 
 Blood transcriptomic age clocks built from RNA-seq in [recount3](https://rna.recount.bio/):
 an elastic net on gene expression (log-CPM), and the same model with LeafCutter splicing (PSI) added.
-Everything runs on a CPU with numpy, pandas, scipy, scikit-learn and requests.
 
 ## Data
 
@@ -15,7 +14,7 @@ Everything runs on a CPU with numpy, pandas, scipy, scikit-learn and requests.
 | GTEx v8 whole blood | GTEx `BLOOD` | 755 subjects | 20-79 | ages are public 10-year bins only |
 
 Ages and sex for the GEO samples come from Li et al. 2025, Table S1 (`metadata/geo_samples_li2025.csv`).
-GTEx ages are the bin midpoints (25, 35, ... 75); exact GTEx ages are access-controlled and not used.
+GTEx ages are the bin midpoints (25, 35, ... 75); exact GTEx ages are access-controlled.
 
 ## Run
 
@@ -37,8 +36,7 @@ metadata/           GEO sample sheet (ages, sex)
 ## What each step does
 
 **01_download.py.** Downloads recount3 metadata, QC tables, gene coverage sums and junction counts for the
-four GEO studies and GTEx whole blood, plus the GENCODE v26 annotation recount3 uses. It skips files that
-already exist.
+four GEO studies and GTEx whole blood, plus the GENCODE v26 annotation recount3 uses.
 
 **02_preprocess.py.**
 - **Samples:** GEO runs from the sample sheet that are in recount3. For GTEx, whole blood in the v8
