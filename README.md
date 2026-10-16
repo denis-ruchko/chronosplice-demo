@@ -1,4 +1,4 @@
-# ChronoSplice clock
+# ChronoSplice demo
 
 Blood transcriptomic age clocks built from public RNA-seq in [recount3](https://rna.recount.bio/):
 an elastic net on gene expression (log-CPM), and the same model with LeafCutter splicing (PSI) added.
@@ -25,8 +25,6 @@ python 01_download.py   --raw data/raw                         # about 1.3 GB fr
 python 02_preprocess.py --raw data/raw --out data/processed    # samples, QC, gene and junction counts
 python 03_train.py      --data data/processed --out results    # leave-one-study-out + final models
 ```
-
-Step 3 needs about 6 GB of free RAM and takes roughly an hour on 5 cores.
 
 ```
 clock.py            shared functions (recount3 I/O, normalisation, LeafCutter, elastic net)
@@ -89,7 +87,6 @@ already exist.
 ## Limits
 - The GEO studies are mostly young (GSE79362 is 13-18; GSE94438 is mostly under 35), so ages over 50 come mainly from GTEx, which is postmortem blood with binned ages.
 - Held-out GTEx MAE is measured against bin midpoints.
-- There is no external holdout in this pipeline: all numbers are leave-one-study-out estimates.
 
 ## References
 - Wilks C. et al. recount3: summaries and queries for large-scale RNA-seq expression and splicing. *Genome Biol* 2021.
